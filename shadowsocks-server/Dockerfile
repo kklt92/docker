@@ -14,8 +14,8 @@ WORKDIR $GOPATH
 RUN go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server && \
       go install github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server
 
-COPY shadowsocks-config.json /go
+COPY shadowsocks-config.json /go/
 
-ENTRYPOINT ["shadowsocks-server -c /go/shadowsocks-config.json"]
+ENTRYPOINT ["$GOPATH/bin/shadowsocks-server -c /go/shadowsocks-config.json"]
 
 
