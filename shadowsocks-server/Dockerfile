@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINTER Weihao Ming <mingweihao@gmail.com>
+MAINTAINER Weihao Ming <mingweihao@gmail.com>
 
 RUN yum install -y go 
 RUN mkdir /go
