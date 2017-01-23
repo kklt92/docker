@@ -1,7 +1,8 @@
 FROM centos:7
 MAINTAINER Weihao Ming <mingweihao@gmail.com>
 
-RUN yum install -y go 
+RUN yum install -y go \
+      git
 RUN mkdir /go
 ENV GOPATH /go
 
