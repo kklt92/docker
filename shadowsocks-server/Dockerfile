@@ -16,6 +16,8 @@ RUN go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server && \
 
 COPY shadowsocks-config.json /go/
 
+EXPOSE 8388
+
 CMD /go/bin/shadowsocks-server -c /go/shadowsocks-config.json
 
 
