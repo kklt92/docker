@@ -16,6 +16,6 @@ RUN go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server && \
 
 COPY shadowsocks-config.json /go/
 
-ENTRYPOINT ["$GOPATH/bin/shadowsocks-server -c /go/shadowsocks-config.json"]
+ENTRYPOINT ["/go/bin/shadowsocks-server -c /go/shadowsocks-config.json"]
 
 
